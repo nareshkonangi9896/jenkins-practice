@@ -76,7 +76,7 @@ pipeline {
         }
         stage('PROD Deploy') {
         when {
-            branch 'master'
+            environment name: 'CC', value: 'clang'
         }
         steps {
             echo 'Deploying to PROD'
