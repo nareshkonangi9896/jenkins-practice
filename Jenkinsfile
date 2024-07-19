@@ -37,7 +37,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                error 'this is failed'
+                //error 'this is failed'
             }
         }
         stage('credentials') {
