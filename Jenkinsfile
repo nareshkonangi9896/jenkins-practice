@@ -37,7 +37,7 @@ pipeline {
                 //error 'this is failed'
             }
         }
-        stage('Example') {
+        stage('credentials') {
             environment { 
                 AN_ACCESS_KEY = credentials('6d12038f-7d16-4b3a-a2b5-1442de121600') 
             }
@@ -45,7 +45,7 @@ pipeline {
                 sh 'printenv'
             }
         }
-        stage('Example') {
+        stage('Parameters') {
             steps {
                 echo "Hello ${params.PERSON}"
 
