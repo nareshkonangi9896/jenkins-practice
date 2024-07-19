@@ -2,6 +2,7 @@ pipeline {
     agent { node { label 'Agent-1' } }
     options {
         ansiColor('xterm')
+        timeout(time: 1, unit: 'HOURS') 
     }
     environment { 
         CC = 'clang'
@@ -14,6 +15,7 @@ pipeline {
                     ls -ltr
                     pwd
                     echo "hello from github push webhook event"
+                    printenv
                 '''
             }
         }
