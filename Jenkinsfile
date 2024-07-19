@@ -1,7 +1,10 @@
 pipeline {
-    agent { node { label 'AGENT-1' } }
+    agent { node { label 'Agent-1' } }
     options {
         ansiColor('xterm')
+    }
+    environment { 
+        CC = 'clang'
     }
     stages {
         stage('Build') {
